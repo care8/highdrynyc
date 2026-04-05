@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High &amp; Dry</title>
+
   <style>
     body {
       margin: 0;
@@ -14,13 +15,13 @@
     }
 
     img {
-      width: 40vw;   /* 40% of the window width */
-      height: auto;  /* keeps aspect ratio */
-      min-width: 200px;
+      width: clamp(200px, 40vw, 800px); /* min, preferred, max */
+      height: auto;
+      flex-shrink: 0; /* prevents shrinking in flexbox */
     }
   </style>
 </head>
 <body>
-  <img src="hd.svg" />
+  <img src="hd.svg" alt="High &amp; Dry SVG">
 </body>
 </html>
