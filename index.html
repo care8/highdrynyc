@@ -24,30 +24,40 @@
 
 -->
 
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High &amp; Dry</title>
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
+
   <style>
     body {
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      overflow: hidden;
     }
 
     img {
       width: clamp(200px, 40vw, 800px);
       height: auto;
       flex-shrink: 0;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        width: 77vw;
+        max-width: 500px;
+      }
     }
   </style>
 </head>
+
 <body>
   <img src="hd.svg" alt="peace on earth">
 </body>
